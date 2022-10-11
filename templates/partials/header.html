@@ -42,14 +42,14 @@
                 </a>
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav m-auto">
-                        <li class="nav-item">
+                        <li {% if is_home %} class="nav-item active" {% endif %}>
                             <a href="{% url 'index' %}" class="nav-link active">
                                 Home
                                 
                             </a>
                             
                         </li>
-                        <li class="nav-item">
+                        <li {% if is_about %} class="nav-item active" {% endif %}>
                             <a href="{% url 'About us' %}" class="nav-link">
                                 About
                             </a>
@@ -145,7 +145,7 @@
                             </ul>
                         </li>
                         {% endcomment %}
-                        <li class="nav-item">
+                        <li {% if is_service %} class="nav-item active" {% endif %}>
                             <a href="/Service/1/" class="nav-link">
                                 Services
                                 
@@ -153,21 +153,21 @@
                             
                         </li>
                         
-                        <li class="nav-item">
+                        <li {% if is_gallery %} class="nav-item active" {% endif %}>
                             <a href="{% url 'Gallery' %}" class="nav-link">
                                 Gallery
                                 
                             </a>
                             
                         </li>
-                        <li class="nav-item">
+                        <li {% if is_blog %} class="nav-item active" {% endif %}>
                             <a href="{% url 'Blog' %}" class="nav-link">
                                 Blog
                               
                             </a>
                             
                         </li>
-                        <li  class="nav-item">
+                        <li {% if is_contact %} class="nav-item active" {% endif %}>
                             <a href="{% url 'Contact' %}" class="nav-link">
                                 Contact
                             </a>

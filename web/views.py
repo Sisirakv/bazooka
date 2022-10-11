@@ -13,6 +13,7 @@ def index(request):
     service = Service.objects.all()[:8]
     testimonials = Testimonial.objects.all()
     context = {
+        "is_home":True,
         'gallery' : gallery,
         "service" : service,
         "testimonials" : testimonials,
@@ -23,6 +24,7 @@ def index(request):
 def about(request):
     service = Service.objects.all()[:8]
     context = {
+        "is_about":True,
         "service":service
     }
     return render(request, 'about.html', context)
@@ -32,7 +34,7 @@ def service(request, id):
     category = ServiceCategory.objects.filter(is_active = True)
     service = Service.objects.get(id=id)
     context = {
-        "is_product" : True,
+        "is_service" : True,
         "category" : category,
         "service" : service,
     }
@@ -42,6 +44,7 @@ def service(request, id):
 def gallery(request):
     gallery = Gallery.objects.all()
     context = {
+        "is_gallery":True,
         'gallery' : gallery,
     }
     return render(request, 'gallery.html', context)
