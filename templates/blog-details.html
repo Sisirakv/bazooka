@@ -1,0 +1,67 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<div class="inner-banner inner-bg3">
+    <div class="container">
+        <div class="inner-title">
+            <h3>Blog Details</h3>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <i class='bx bxs-chevrons-right'></i>
+                </li>
+                <li>Blog Details</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="blog-dtls pt-100 ptb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-1">
+
+            </div>
+            <div class="col-lg-10">
+                <div class="blog-dtls-content">
+                    <div class="blog-dtls-img">
+                        <img src=" {{blog.image.crop.1076x646}} " alt="Blog Images"></noscript>
+                    </div>
+                    <div class="blog-text">
+                        <h2>{{blog.heading}}</h2>
+                        <ul>
+
+                            <li>
+                                <a href="#">
+                                    <i class='bx bx-calendar-alt'></i>
+                                    {{blog.date}}
+                                </a>
+                            </li>
+                        </ul>
+                        <p style="text-align: justify;">
+                            {{ blog.content}}
+                        </p>
+                       
+                    </div>
+
+                </div>
+                
+
+            </div>
+
+            <div class="col-1">
+
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+
+{% endblock %}

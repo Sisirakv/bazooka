@@ -16,8 +16,8 @@
                             ipsum suspendisse ultrices gravida.
                         </p>
                         <div class="banner-btn">
-                            <a href="#" class="default-btn">Know More</a>
-                            <a href="product.html" class="default-btn active">Our Products</a>
+                            <a href="{% url 'About us' %}" class="default-btn">Know More</a>
+                            <a href="/Service/1/" class="default-btn active">Our Service</a>
                         </div>
                     </div>
                 </div>
@@ -25,18 +25,13 @@
                     <div class="banner-img">
                         <img src=" {% static 'img/home1/1.jpg' %} " alt="Banner Images"></noscript>
                         <div class="banner-into-slider owl-carousel owl-theme">
+                            
+                            {% for images in gallery %}
                             <div class="banner-item">
-                                <img src=" {% static 'img/home1/s-1.png' %} " alt="Banner Images"></noscript>
+                                <img src=" {{ images.image.crop.255x255}} " alt="Banner Images"></noscript>
                             </div>
-                            <div class="banner-item">
-                                <img src=" {% static 'img/home1/s-2.png' %} " alt="Banner Images"></noscript>
-                            </div>
-                            <div class="banner-item">
-                                <img src=" {% static 'img/home1/s-3.png' %} " alt="Banner Images"></noscript>
-                            </div>
-                            <div class="banner-item">
-                                <img src=" {% static 'img/home1/s-1.png' %} " alt="Banner Images"></noscript>
-                            </div>
+                            {% endfor %}
+                           
                         </div>
                     </div>
                 </div>
@@ -73,7 +68,7 @@
                             area page puzzles hell in is through on the in more rent mountains.
                         </p>
                         <div class="about-btn">
-                            <a href="#" class="know-more-btn">Know More</a>
+                            <a href="{% url 'About us' %}" class="know-more-btn">Know More</a>
                         </div>
                     </div>
                 </div>
@@ -96,114 +91,23 @@
                 </p>
             </div>
             <div class="row pt-45">
-                <div class="col-lg-4 col-md-6">
+                {% for services in service %}
+                <div class="col-lg-4 col-md-6 col-sm-6 col-6">
                     <div class="service-card">
-                        <a href="services.html">
-                            <img src=" {% static 'img/service/1.jpg' %} "
+                        <a href="{% url 'Service' services.id %}">
+                            <img src=" {{ services.image_1.crop.550x520}} "
                                     alt="Service Images"></noscript>
                         </a>
                         <div class="service-content">
-                            <a href="services.html">
-                                <h3>Brand Identy</h3>
+                            <a href="{% url 'Service' services.id %}">
+                                <h3>{{services.service_name}}</h3>
                             </a>
-                            <p>Lorem ipsum dolor sit amet, consect is etur adipiscing elit, sed do eiusmo gd tempor
-                                incididunt ut labore.</p>
-                            <a href="services.html" class="more-btn">
-                                <i class='bx bx-plus'></i>
-                            </a>
+                            
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
-                        <a href="services.html">
-                            <img src=" {% static 'img/service/2.jpg' %} "
-                                    alt="Service Images"></noscript>
-                        </a>
-                        <div class="service-content">
-                            <a href="services.html">
-                                <h3>Package Design</h3>
-                            </a>
-                            <p>Lorem ipsum dolor sit amet, consect is etur adipiscing elit, sed do eiusmo gd tempor
-                                incididunt ut labore.</p>
-                            <a href="services.html" class="more-btn">
-                                <i class='bx bx-plus'></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
-                        <a href="services.html">
-                          <img src=" {% static 'img/service/3.jpg' %} "
-                                    alt="Service Images"></noscript>
-                        </a>
-                        <div class="service-content">
-                            <a href="services.html">
-                                <h3>Pattern Design</h3>
-                            </a>
-                            <p>Lorem ipsum dolor sit amet, consect is etur adipiscing elit, sed do eiusmo gd tempor
-                                incididunt ut labore.</p>
-                            <a href="services.html" class="more-btn">
-                                <i class='bx bx-plus'></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
-                        <a href="services.html">
-                            <img src=" {% static 'img/service/4.jpg' %} "
-                                    alt="Service Images"></noscript>
-                        </a>
-                        <div class="service-content">
-                            <a href="services.html">
-                                <h3>Book Cover</h3>
-                            </a>
-                            <p>Lorem ipsum dolor sit amet, consect is etur adipiscing elit, sed do eiusmo gd tempor
-                                incididunt ut labore.</p>
-                            <a href="services.html" class="more-btn">
-                                <i class='bx bx-plus'></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
-                        <a href="services.html">
-                            <img src=" {% static 'img/service/5.jpg' %} "
-                                    alt="Service Images"></noscript>
-                        </a>
-                        <div class="service-content">
-                            <a href="services.html">
-                                <h3>T-shirt Design</h3>
-                            </a>
-                            <p>Lorem ipsum dolor sit amet, consect is etur adipiscing elit, sed do eiusmo gd tempor
-                                incididunt ut labore.</p>
-                            <a href="services.html" class="more-btn">
-                                <i class='bx bx-plus'></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
-                        <a href="services.html">
-                            <img src=" {% static 'img/service/6.jpg' %} "
-                                    alt="Service Images"></noscript>
-                        </a>
-                        <div class="service-content">
-                            <a href="services.html">
-                                <h3>Brochure Design</h3>
-                            </a>
-                            <p>Lorem ipsum dolor sit amet, consect is etur adipiscing elit, sed do eiusmo gd tempor
-                                incididunt ut labore.</p>
-                            <a href="services.html" class="more-btn">
-                                <i class='bx bx-plus'></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
+                
             </div>
         </div>
     </section>
@@ -404,7 +308,7 @@
                 </p>
             </div>
             <div class="row pt-45">
-                <div class="col-lg-3 col-sm-6">
+                <div class="col-lg-3 col-sm-6 col-6 col-sm-6">
                     <div class="designer-card">
                         <div class="designer-img">
                             <a href="designer.html">
@@ -416,29 +320,11 @@
                                 <h3>John Doe</h3>
                             </a>
                             <span>Director</span>
-                            <div class="social-icon">
-                                <ul>
-                                    <li>
-                                        <a href="#" target="_blank">
-                                            <i class='bx bxl-facebook'></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_blank">
-                                            <i class='bx bxl-twitter'></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_blank">
-                                            <i class='bx bxl-instagram'></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6">
+                <div class="col-lg-3 col-sm-6 col-6 col-sm-6">
                     <div class="designer-card">
                         <div class="designer-img">
                             <a href="designer.html">
@@ -450,29 +336,11 @@
                                 <h3>John Smith</h3>
                             </a>
                             <span>Product Designer</span>
-                            <div class="social-icon">
-                                <ul>
-                                    <li>
-                                        <a href="#" target="_blank">
-                                            <i class='bx bxl-facebook'></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_blank">
-                                            <i class='bx bxl-twitter'></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_blank">
-                                            <i class='bx bxl-instagram'></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6">
+                <div class="col-lg-3 col-sm-6 col-6 col-sm-6">
                     <div class="designer-card">
                         <div class="designer-img">
                             <a href="designer.html">
@@ -484,29 +352,11 @@
                                 <h3>Evanaa</h3>
                             </a>
                             <span>llustrator Designer</span>
-                            <div class="social-icon">
-                                <ul>
-                                    <li>
-                                        <a href="#" target="_blank">
-                                            <i class='bx bxl-facebook'></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_blank">
-                                            <i class='bx bxl-twitter'></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_blank">
-                                            <i class='bx bxl-instagram'></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6">
+                <div class="col-lg-3 col-sm-6 col-6 col-sm-6">
                     <div class="designer-card">
                         <div class="designer-img">
                             <a href="designer.html">
@@ -518,25 +368,7 @@
                                 <h3>Knot Doe</h3>
                             </a>
                             <span>Mockup Specialist</span>
-                            <div class="social-icon">
-                                <ul>
-                                    <li>
-                                        <a href="#" target="_blank">
-                                            <i class='bx bxl-facebook'></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_blank">
-                                            <i class='bx bxl-twitter'></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_blank">
-                                            <i class='bx bxl-instagram'></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -556,66 +388,26 @@
                 </p>
             </div>
             <div class="testimonial-slider-two owl-carousel owl-theme pt-45">
+                {% for single_testmonial in testimonials %}
                 <div class="testimonial-card">
                     <div class="row align-items-center">
                         <div class="col-lg-7">
                             <div class="testimonial-card-content">
-                                <h3>Evana Yas</h3>
+                                <h3>{{single_testmonial.name}}</h3>
                                 <p>
-                                    “Adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua. Quis ipsum suspendisse
-                                    ultrices gravida. Risus commodo viverra maecenas.”
+                                    “{{single_testmonial.review}}”
                                 </p>
                             </div>
                         </div>
                         <div class="col-lg-5">
                             <div class="testimonial-img-2">
                                 <img
-                                        src=" {% static 'img/testimonial/2.jpg' %} " alt="Testimonial Images"></noscript>
+                                        src=" {{single_testmonial.image.crop.370x370}} " alt="Testimonial Images"></noscript>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="row align-items-center">
-                        <div class="col-lg-7">
-                            <div class="testimonial-card-content">
-                                <h3>John Smith</h3>
-                                <p>
-                                    “Adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua. Quis ipsum suspendisse
-                                    ultrices gravida. Risus commodo viverra maecenas.”
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-5">
-                            <div class="testimonial-img-2">
-                        <img
-                                        src=" {% static 'img/testimonial/4.jpg' %} " alt="Testimonial Images"></noscript>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="row align-items-center">
-                        <div class="col-lg-7">
-                            <div class="testimonial-card-content">
-                                <h3>Annie Smith</h3>
-                                <p>
-                                    “Adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua. Quis ipsum suspendisse
-                                    ultrices gravida. Risus commodo viverra maecenas.”
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-5">
-                            <div class="testimonial-img-2">
-                            <img
-                                        src=" {% static 'img/testimonial/3.jpg' %} " alt="Testimonial Images"></noscript>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
         <div class="testimonial-icon">
