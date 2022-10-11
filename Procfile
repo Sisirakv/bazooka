@@ -1,0 +1,1 @@
+web: gunicorn bazooka.wsgi --log-file -
