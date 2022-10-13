@@ -1,5 +1,5 @@
 from logging import PlaceHolder
-from tkinter import Widget
+
 from django import forms
 from django.forms.widgets import SelectMultiple, TextInput, Textarea, EmailInput, CheckboxInput,URLInput, Select, NumberInput, RadioSelect, FileInput,ClearableFileInput
 

@@ -15,7 +15,7 @@
     dots: true,
     autoplay: true,
     autoplayHoverPause: true,
-    responsive: { 0: { items: 2 }, 1000: { items: 3 } },
+    responsive: { 0: { items: 2 }, 1000: { items: 5 } },
   });
   $(".service-slider").owlCarousel({
     loop: true,

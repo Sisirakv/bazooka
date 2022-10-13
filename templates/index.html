@@ -293,7 +293,7 @@
         </div>
     </section>
 
-{% endcomment %}
+
    
 
 
@@ -375,7 +375,7 @@
             </div>
         </div>
     </div>
-
+{% endcomment %}
 
     <div class="testimonial-area-two ptb-100">
         <div class="container">
@@ -511,9 +511,28 @@
 {% endcomment %}
 <br>
 <br>
-<br>
-<br>
 
+<div class="col-lg-12 pe-0">
+    <div class="banner-img">
+        <!-- <img src=" {% static 'img/home1/1.jpg' %} " alt="Banner Images"></noscript> -->
+        <div class="banner-into-slider owl-carousel owl-theme">
+            
+            {% for images in gallery %}
+            <div class="banner-item">
+                <img src=" {{ images.image.crop.255x255}} " alt="Banner Images"></noscript>
+            </div>
+            {% endfor %}
+           
+        </div>
+    </div>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
  {% endblock %}
