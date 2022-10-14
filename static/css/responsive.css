@@ -392,8 +392,13 @@
     bottom: unset;
     right: 32%;
   }
+  .testimonial-card-content p {
+    
+    margin-bottom: 20px
+}
   .testimonial-img-2 img {
     margin: 0 auto;
+    width: 100px !important
   }
   .testimonial-icon {
     display: none;

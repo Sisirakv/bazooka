@@ -35,14 +35,14 @@
                 {% for each_gallery in gallery %}
                 <div class="col-lg-4 col-md-6 col-sm-6 col-6">
                     <div class="product-card">
-                        <a href="#">
+                        <a href="{{ each_gallery.image.url}}">
                             <img src=" {{ each_gallery.image.crop.550x520}} "
                                     alt="Products Images"></noscript>
                         </a>
                         <div class="product-content">
-                            <a href="#">
+                            
                                 <h3>{{each_gallery.title}}</h3>
-                            </a>
+                            
                             
                            
                         </div>

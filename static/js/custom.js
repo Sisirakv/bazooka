@@ -15,7 +15,16 @@
     dots: true,
     autoplay: true,
     autoplayHoverPause: true,
-    responsive: { 0: { items: 2 }, 1000: { items: 5 } },
+    responsive: { 0: { items: 2 }, 1000: { items: 3 } },
+  });
+  $(".banner-into-slider1").owlCarousel({
+    loop: true,
+    margin: 30,
+    nav: false,
+    dots: true,
+    autoplay: true,
+    autoplayHoverPause: true,
+    responsive: { 0: { items: 3 }, 1000: { items: 8 } },
   });
   $(".service-slider").owlCarousel({
     loop: true,
@@ -41,8 +50,8 @@
   });
   $(".testimonial-slider").owlCarousel({
     loop: true,
-    items: 1,
-    margin: 30,
+    items: 2,
+    margin: 50,
     nav: true,
     dots: false,
     autoplay: true,
@@ -81,7 +90,7 @@
   $(".testimonial-slider-two").owlCarousel({
     loop: true,
     items: 1,
-    margin: 30,
+    margin: 50,
     nav: true,
     dots: false,
     autoplay: true,

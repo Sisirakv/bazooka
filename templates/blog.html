@@ -34,7 +34,7 @@
             </div>
             <div class="row pt-45">
                 {% for blogs in blog %}
-                <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                <div class="col-lg-2 col-md-6 col-sm-6 col-6">
                     <div class="blog-card">
                         <a href=" {% url 'Blog Details' blogs.id %} ">
                             <img src=" {{blogs.image.crop.550x520}} "
