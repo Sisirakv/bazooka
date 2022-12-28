@@ -94,11 +94,11 @@
             {% for services in service %}
             <div class="col-lg-2 col-md-6 col-sm-6 col-6">
                 <div class="service-card">
-                    <a href="{% url 'Service' services.id %}">
+                    <a href="{% url 'Service Detatils' services.id %}">
                         <img src=" {{ services.image_1.crop.550x520}} " alt="Service Images"></noscript>
                     </a>
                     <div class="service-content">
-                        <a href="{% url 'Service' services.id %}">
+                        <a href="{% url 'Service Detatils' services.id %}">
                             <h3>{{services.service_name}}</h3>
                         </a>
 
@@ -509,9 +509,10 @@
     <div class="col-lg-12 pe-0">
         <div class="banner-img">
             <!-- <img src=" {% static 'img/home1/1.jpg' %} " alt="Banner Images"></noscript> -->
+            <h3 style="text-align: center;padding-bottom:20px">Our Clients</h3>
             <div class="banner-into-slider1 owl-carousel owl-theme">
 
-                {% for images in gallery %}
+                {% for images in client %}
                 <div class="banner-item">
                     <img src=" {{ images.image.crop.255x255}} " alt="Banner Images"></noscript>
                 </div>

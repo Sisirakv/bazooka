@@ -4,7 +4,7 @@
 
 
 
-    <div class="inner-banner inner-bg4">
+    <!-- <div class="inner-banner inner-bg4">
         <div class="container">
             <div class="inner-title">
                 <h3>Blog</h3>
@@ -19,12 +19,12 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
     <div class="blog-area pt-100 pb-70">
         <div class="container">
-            <div class="section-title text-center">
+            <div class="section-title text-center blogname">
                 <span>Blogs</span>
                 <h2>Our Regular Blog Post</h2>
                 <p>
@@ -34,7 +34,7 @@
             </div>
             <div class="row pt-45">
                 {% for blogs in blog %}
-                <div class="col-lg-2 col-md-6 col-sm-6 col-6">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                     <div class="blog-card">
                         <a href=" {% url 'Blog Details' blogs.id %} ">
                             <img src=" {{blogs.image.crop.550x520}} "

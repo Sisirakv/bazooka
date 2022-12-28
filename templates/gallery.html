@@ -3,7 +3,7 @@
 {% block content %}
 
 
-    <div class="inner-banner inner-bg7">
+    <!-- <div class="inner-banner inner-bg7">
         <div class="container">
             <div class="inner-title">
                 <h3>Gallery</h3>
@@ -18,13 +18,13 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
     <section class="product-area pt-100 pb-70">
         <div class="container">
-            <div class="section-title text-center">
-                <span>Portfolio</span>
+            <div class="section-title text-center portname">
+                <span class="">Portfolio</span>
                 <h2>We Have Some Pre-ready Demo Product</h2>
                 <p>
                     What indication best sick be project proposal in attempt, train of the showed
@@ -33,7 +33,7 @@
             </div>
             <div class="row pt-45">
                 {% for each_gallery in gallery %}
-                <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                     <div class="product-card">
                         <a href="{{ each_gallery.image.url}}">
                             <img src=" {{ each_gallery.image.crop.550x520}} "
@@ -41,7 +41,7 @@
                         </a>
                         <div class="product-content">
                             
-                                <h3>{{each_gallery.title}}</h3>
+                                <h3 class="galleryname">{{each_gallery.title}}</h3>
                             
                             
                            

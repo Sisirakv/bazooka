@@ -61,12 +61,12 @@ img {
 }
 
 .ptb-100 {
-    padding-top: 30px;
-    padding-bottom:30px
+    padding-top: 14px;
+    padding-bottom:0px
 }
 
 .pt-100 {
-    padding-top: 100px
+    padding-top: 52px
 }
 
 .pb-100 {
@@ -87,7 +87,7 @@ img {
 }
 
 .pb-70 {
-    padding-bottom: 70px
+    padding-bottom: 2px
 }
 
 .pt-45 {
@@ -281,7 +281,7 @@ img {
 
 .main-nav nav .navbar-nav .nav-item a {
     text-transform: capitalize;
-    color: #222;
+    color: #ff743c;
     font-weight: 500;
     margin-left: 12px;
     margin-right: 12px
@@ -894,7 +894,7 @@ img {
 
 .about-img img {
     text-align: center;
-    max-width: 450px
+    max-width: 300px
 }
 
 .about-img .about-bg-shape {
@@ -906,15 +906,19 @@ img {
 }
 
 .about-img .about-bg-shape img {
-    max-width: 500px;
+    max-width: 350px;
     border: 1px solid #dadade;
     border-radius: 15px
 }
 
 .about-content {
     margin-left: 40px;
-    margin-top: 187px;
+    margin-top: 52px;
     margin-bottom: 30px
+}
+
+.galleryname{
+    font-size: 1.0rem;
 }
 
 .about-content span {
@@ -1096,7 +1100,7 @@ img {
 }
 
 .service-card .service-content a h3 {
-    font-size: 24px
+    font-size: 20px
 }
 
 .service-card .service-content p {
@@ -1622,7 +1626,7 @@ img {
 }
 
 .blog-card .blog-content a h3 {
-    font-size: 22px;
+    font-size: 18px;
     -webkit-transition: .7s;
     transition: .7s
 }
@@ -2181,7 +2185,7 @@ img {
 
 .testimonial-img-2 img {
     border-radius: 15px;
-    width: 229px !important
+    width: 184px !important
 }
 
 .testimonial-icon {

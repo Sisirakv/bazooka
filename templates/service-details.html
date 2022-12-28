@@ -3,7 +3,7 @@
 {% block content %}
 
 
-    <div class="inner-banner inner-bg9">
+    <!-- <div class="inner-banner inner-bg9">
         <div class="container">
             <div class="inner-title">
                 <h3>Service Details</h3>
@@ -18,14 +18,18 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </div> -->
 
    
     <div class="service-dtls pt-100 pb-70">
         <div class="container">
             <div class="row">
                
-                <div class="col-lg-10">
+
+                <div class="col-lg-2">
+
+                </div>
+                <div class="col-lg-8">
                     <div class="service-dtls-slider  owl-carousel owl-theme" >
                         
                         <div class="service-dtls-item" >
@@ -52,20 +56,20 @@
                     </div>
                 </div>
                 <div class="col-lg-2">
-                    <div class="service-sidebar" >
+                    <!-- <div class="service-sidebar" >
                         <div class="service-sidebar-widget">
                             <h3>More Services</h3>
                             <ul>
 
-                                {% for categories in category %}
+                                
                                 <li>
                                     <i class='bx bxs-chevrons-right '></i>
-                                    <a href="{% url 'Service' categories.id %}">
-                                        {{categories.category_name}}
+                                    <a href="#">
+                                        {{service_detail.service_name}}
                                     </a>
                                 </li>
 
-                                {% endfor %}
+                               
 
                                 {% comment %}
                                 <li>
@@ -102,7 +106,7 @@
                             </ul>
                         </div>
                         
-                    </div>
+                    </div> -->
                 </div>
                
             </div>

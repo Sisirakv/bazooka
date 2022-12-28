@@ -1,4 +1,5 @@
 
+from http import client
 from multiprocessing import context
 from django.contrib import messages
 from django.shortcuts import render, redirect
@@ -12,11 +13,13 @@ def index(request):
     gallery = Gallery.objects.all()[:5]
     service = Service.objects.all()[:8]
     testimonials = Testimonial.objects.all()
+    client = Clinet.objects.all()
     context = {
         "is_home":True,
         'gallery' : gallery,
         "service" : service,
         "testimonials" : testimonials,
+        "client" : client,
     }
     return render(request, 'index.html', context)
 
@@ -28,14 +31,21 @@ def about(request):
         "service":service
     }
     return render(request, 'about.html', context)
- 
 
-def service(request, id):
-    category = ServiceCategory.objects.filter(is_active = True)
+def service(request):
+    service_list = Service.objects.all()
+    context = {
+        "is_service" : True,
+        "service_list" : service_list,
+    } 
+    return render(request, 'services.html', context)
+
+def service_detail(request, id):
+  
     service = Service.objects.get(id=id)
     context = {
         "is_service" : True,
-        "category" : category,
+      
         "service" : service,
     }
     return render(request, 'service-details.html', context)

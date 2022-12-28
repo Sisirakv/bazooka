@@ -26,15 +26,15 @@ class Gallery(models.Model):
         return self.title
 
 
-class ServiceCategory(models.Model):
-    category_name = models.CharField(max_length=255)
-    is_active  = models.BooleanField(default=True)
+# class ServiceCategory(models.Model):
+#     category_name = models.CharField(max_length=255)
+#     is_active  = models.BooleanField(default=True)
 
-    class Meta:
-        verbose_name_plural = ("Service Categories")
+#     class Meta:
+#         verbose_name_plural = ("Service Categories")
 
-    def __str__(self):
-        return str(self.category_name)
+#     def __str__(self):
+#         return str(self.category_name)
 
 
 class Service(models.Model):
@@ -42,9 +42,9 @@ class Service(models.Model):
     image_1 = VersatileImageField('Image',upload_to='images/service/')
     image_2 = VersatileImageField('Image',upload_to='images/service/')
     image_3 = VersatileImageField('Image',upload_to='images/service/')
-    details = models.CharField(max_length=1200)
-    category = models.ForeignKey(ServiceCategory,on_delete=models.CASCADE)
-
+    summary = models.CharField(max_length=50)
+    details = models.TextField()
+    
     def __str__(self):
         return self.service_name
 
@@ -76,3 +76,8 @@ class Testimonial(models.Model):
 
     class Meta:
         verbose_name_plural =("Testimonial")
+        
+        
+class Clinet(models.Model):
+    image = VersatileImageField('Image',upload_to='images/client/')
+    name = models.CharField(max_length=200)

@@ -1,0 +1,52 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+
+
+    <section class="service-area pt-100 pb-70">
+        <div class="container">
+            <div class="section-title text-center servicename">
+                <span>Services</span>
+                <h2>Pixis Provide Good Quality Printing Services</h2>
+                <p>
+                    What indication best sick be project proposal in attempt, train of the showed
+                    some a forth. That homeless, won't many of goals thoughts volumes felt.
+                </p>
+            </div>
+            <div class="row pt-45">
+
+                {% for service in service_list %}
+
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                    <div class="service-card">
+                        <a href="{% url 'Service Detatils' service.id %}">
+                            <img src=" {{service.image_1.crop.550x520}} "
+                                    alt="Service Images"></noscript>
+                        </a>
+                        <div class="service-content">
+                            <a href="{% url 'Service Detatils' service.id %}">
+                                <h3>{{service.service_name}}</h3>
+                            </a>
+                            <p>{{service.summary}}....</p>
+                            <a href="{% url 'Service Detatils' service.id %}" class="more-btn">
+                                <i class='bx bx-plus'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {% endfor %}
+          
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+{% endblock %}
